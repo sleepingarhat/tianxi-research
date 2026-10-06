@@ -5,7 +5,7 @@
 ## 邊界（硬規則）
 
 - 本倉**冇**凍結預測、冇 prediction_log、冇版本指紋、冇每日凍結流程。
-- 本倉任何腳本、任何結果，**唔可以**寫入生產倉 `tianxi-football-database` 的
+- 本倉任何腳本、任何結果，**唔可以**寫入生產倉（今統一倉）`tianxi-football` 的
   `data/predictions/`、`models/`、`snapshots/` 或任何指紋欄。
 - 研究要升級生產，唯一路徑：三主閘（RPS、實際比分格 log-loss、ECE）＋三副閘
   （大細 2.5 校準、對角總質量、頭八格覆蓋）逐季 walk-forward 全過，
